@@ -3,6 +3,6 @@
 @tailwind utilities;
 @layer components {
     body {
-      background-color:#371B58;
+      background-color:#999;
     }
   }

@@ -1,21 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 
-
-function Movie({data}) {
-    const movies=data.results;
-
-
+function TvSeries({tvdata}) {
+  const movies=tvdata.results;
+   
   return (
-  
-    <div className='p-4 mx-auto bg-[#371B58] px-12 rounded-xl'>
-    <h2 className='w-[85%] mx-auto p-4 text-3xl font-semibold text-[#fff]'>Populars</h2>
+    <div className='p-12 mx-auto mx-auto bg-[#371B58] w-[90%] m-4 rounded-xl'>
     <div className='movies flex'>  
     {movies.map((movie,key)=>(
-    <Link key={key} href={`/movies/${movie.id}`}>
-    <div  className='movie  hover:scale-110 transition-all duration-1000'>
+    <Link key={key} href={`/tv/${movie.id}`}>
+    <div   className='movie  hover:scale-110 transition-all duration-1000'>
      <img className="" src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.backdrop_path}`}/>
-     <h3 className='title transition-all  hover:text-xl font-semibold font-mono'>{movie.title}</h3>
+     <h3 className='title transition-all  hover:text-xl font-semibold font-mono'>{movie.name}</h3>
     </div>
     </Link>
   ))}
@@ -61,10 +57,9 @@ function Movie({data}) {
      </div>
 
     </div>
-     
-    
   )
 }
 
 
-export default Movie;
+
+export default TvSeries

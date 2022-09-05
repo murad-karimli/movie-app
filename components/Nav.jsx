@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Dropdown, Menu, Space } from 'antd';
+import Link from 'next/link';
 
 
 function Nav() {
@@ -11,13 +12,13 @@ function Nav() {
         </div>
         <ul className='flex text-[#fff] font-semibold'>
           <li className='mx-4'>
-            About
+           <Link href="/about" ><a className='hover:text-2xl'>About</a></Link>
           </li>
           <li className='mx-4 text-[#fff] font-semibold'>
-            All films
+          <Link href="/"><a className='hover:text-2xl'>All films</a></Link>
           </li>
           <li className='mx-4 text-[#fff] font-semibold'>
-            Categories
+          <Link href="/tv"><a className='hover:text-2xl'>Tv series</a></Link>
           </li>
           <li>
           
